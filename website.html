@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Isabelle Ng - Personal Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* New font import - Montserrat is a good alternative to Inter and offers a clean look */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      /* Changed font to Montserrat */
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    
+    /* Updated gradient to pink/sunset tones */
+    .gradient-bg {
+      background: linear-gradient(135deg, #ff6bab 0%, #FFB6C1 100%); /* Bright Pink to Light Pink */
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .text-gradient {
+      background: linear-gradient(135deg, #d97306 0%, #da4e17 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .section-fade {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .floating-elements::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      /* Updated floating element background to pink/sunset tones */
+      background: radial-gradient(circle, rgba(255, 107, 107, 0.1) 0%, transparent 70%); /* Pink with transparency */
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(180deg); }
+    }
+    
+    /* Updated border gradient to pink/sunset tones */
+    .border-gradient {
+      border-image: linear-gradient(135deg, #FF6B6B 0%, #FFB6C1 100%) 1; /* Bright Pink to Light Pink */
+    }
+    
+    .experience-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white font-sans min-h-screen flex flex-col relative overflow-x-hidden overflow-y-visible z-0">
+
+
+  <header class="relative bg-white/80 backdrop-blur-md shadow-xl py-16 text-center border-b border-white/20">
+    <!-- <div class="floating-elements absolute inset-0"></div> -->
+    <div class="relative z-10">
+      <h1 class="text-6xl font-bold text-gradient mb-4 animate-pulse">Isabelle Ng</h1>
+      <p class="text-xl text-gray-600 font-medium tracking-wide">Computer Science • Data Science • Music</p>
+      <div class="mt-6 flex justify-center space-x-2">
+        <div class="w-2 h-2 bg-pink-500 rounded-full animate-bounce"></div>
+        <div class="w-2 h-2 bg-rose-500 rounded-full animate-bounce animation-delay-100"></div>
+        <div class="w-2 h-2 bg-red-500 rounded-full animate-bounce animation-delay-200"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-8 py-16 space-y-24 flex-grow relative z-10">
+
+    <section id="about" class="section-fade space-y-6">
+      <h2 class="text-4xl font-bold text-gradient mb-8 text-center">About Me</h2>
+      <div class="grid md:grid-cols-1 gap-8">
+        <div class="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-2xl card-hover border border-white/20">
+          <p class="text-lg leading-relaxed text-gray-700 mb-6">
+            Hello there! I'm Isabelle Ng, an undergraduate at UC Berkeley passionate about computer science, data
+            science, and music. I enjoy finding ways to solve business problems with AI and exploring
+            the potential of natural language processing.
+          </p>
+          <p class="text-lg leading-relaxed text-gray-700 mb-6">
+            My academic and professional journey includes data engineering and LLM development contract 
+            work with Mattel Inc. and Conagra Brands Inc., as well as interning on the engineering team at H2O.ai, where I 
+            worked on incorporating a chatbot designed to assist employees with queries about H2O.ai products. I am 
+            currently working at Accenture's Center for Advanced AI, focusing on researching and improving a text-to-SQL 
+            agentic framework to support client needs.
+          </p>
+          <p class="text-lg leading-relaxed text-gray-700">
+            Outside of technology, I'm a lifelong musician who loves writing original songs. I also founded and led UC Berkeley's chapter of the International Software 
+            Product Management Association, teaching product management fundamentals and organizing global AI product summits. Having retired from presidency, I 
+            now focus on teaching Data C88C at Berkeley's College of Computing, Data Science, and Society as a head teaching assistant, and help nurture
+            culture as a VP of Data Science Society, Cal's oldest student organization dedicated to data science and machine learning.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section-fade space-y-8">
+      <h2 class="text-4xl font-bold text-gradient mb-12 text-center">Experience</h2>
+      <div class="grid gap-8">
+        
+        <article class="experience-card rounded-3xl p-8 card-hover border-l-8 border-rose-500 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 rounded-full -mr-16 -mt-16"></div>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold text-white mb-2">Full Stack LLM Development Analyst</h3>
+            <p class="text-rose-600 font-semibold text-lg mb-1">Accenture</p>
+            <p class="text-white text-sm mb-4">Jun 2025 - Present • San Francisco, CA</p>
+            <p class="text-white leading-relaxed">
+              Working under Tharindu Cyril Weerasooriya and Haitao Zhu in the Center of Advanced AI to improve
+              the Agentic Text-SQL framework in Accenture's AI Refinery. Research paper hopefully coming soon.
+            </p>
+          </div>
+        </article>
+
+        <article class="experience-card rounded-3xl p-8 card-hover border-l-8 border-pink-500 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-pink-500/10 rounded-full -mr-16 -mt-16"></div>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold text-white mb-2">Head uGSI (Student Instructor) - Data C88C</h3>
+            <p class="text-pink-600 font-semibold text-lg mb-1">UC Berkeley</p>
+            <p class="text-white text-sm mb-4">May 2025 - Present • Berkeley, CA</p>
+            <p class="text-white leading-relaxed">
+              Running the course alongside Professor Michael Ball, overseeing all teaching operations for
+              Computational Structures in Data Science.
+            </p>
+          </div>
+        </article>
+
+        <article class="experience-card rounded-3xl p-8 card-hover border-l-8 border-red-500 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-red-500/10 rounded-full -mr-16 -mt-16"></div>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold text-white mb-2">Student Researcher</h3>
+            <p class="text-red-600 font-semibold text-lg mb-1">UC Berkeley School of Information</p>
+            <p class="text-white text-sm mb-4">Jan 2025 - May 2025 • Berkeley, CA</p>
+            <p class="text-white leading-relaxed">
+              Analyzing a corpus of over 1,500 legal decisions with LLMs and data analysis to identify patterns
+              in the interpretation of Section 230—the law shaping content moderation on social media—and
+              evaluating widely held claims about its impact.
+            </p>
+          </div>
+        </article>
+
+        <article class="experience-card rounded-3xl p-8 card-hover border-l-8 border-orange-500 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full -mr-16 -mt-16"></div>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold text-white mb-2">President & Co-founder</h3>
+            <p class="text-orange-600 font-semibold text-lg mb-1">ISPMA @ Berkeley</p>
+            <p class="text-white text-sm mb-4">Nov 2023 - Present • Berkeley, CA</p>
+            <p class="text-white leading-relaxed">
+              Co-founded the first University Chapter of the International Software Product Management Association
+              in North America. Currently serving as President, overseeing all club operations including recruitment,
+              logistics, and interaction with the global organization. Successfully planned the 2025 ISPMA SPM Summit:
+              Global AI Products. Also leading a product management fellowship program teaching PM foundations.
+            </p>
+          </div>
+        </article>
+
+        <article class="experience-card rounded-3xl p-8 card-hover border-l-8 border-pink-400 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-pink-400/10 rounded-full -mr-16 -mt-16"></div>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold text-white mb-2">Data Engineering Consultant</h3>
+            <p class="text-pink-400 font-semibold text-lg mb-1">Mattel, Inc.</p>
+            <p class="text-white text-sm mb-4">Sep 2024 - Present • Hybrid</p>
+            <p class="text-white leading-relaxed">
+              Analyzed Mattel's data ecosystem and designed a scalable ESG data pipeline to support sustainability
+              initiatives. Conducted stakeholder interviews, identified critical infrastructure discrepancies, and
+              developed strategic insights and recommendations.
+            </p>
+          </div>
+        </article>
+
+        <article class="experience-card rounded-3xl p-8 card-hover border-l-8 border-red-400 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-red-400/10 rounded-full -mr-16 -mt-16"></div>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold text-white mb-2">LLM Engineering Intern</h3>
+            <p class="text-red-400 font-semibold text-lg mb-1">H2O.ai</p>
+            <p class="text-white text-sm mb-4">Jun 2024 - Aug 2024 • Mountain View, CA</p>
+            <p class="text-white leading-relaxed">
+              Developed a chatbot using Python APIs for H2O.ai's H2O Wave and H2Ogpte, designed to assist employees
+              with queries about H2O.ai products. Engineered a query controller to categorize questions by product
+              type and integrated a Retrieval-Augmented Generation (RAG) model to generate responses from a specific
+              product document repository.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section-fade space-y-8">
+      <h2 class="text-4xl font-bold text-gradient mb-12 text-center">Projects</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <article class="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-2xl card-hover border border-white/20 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-red-400 to-pink-500 rounded-full -mr-12 -mt-12 opacity-20"></div>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold text-gray-700 mb-4">Secure File Sharing System</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Designed and implemented a secure file sharing system with cryptographic access control,
+              invitation management, and encrypted storage. Focused on core security principles like
+              confidentiality, integrity, and forward secrecy. Integrated UUID-based key management and
+              invitation workflows.
+            </p>
+          </div>
+        </article>
+
+        <article class="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-2xl card-hover border border-white/20 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-rose-400 to-red-500 rounded-full -mr-12 -mt-12 opacity-20"></div>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">SQL Debugging & Repair with LLMs</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Explored and extended techniques like SQL-Rewind and SIX-GYM to build intelligent debugging
+              tools for SQL generation and correction. Focused on training LLMs for program repair and
+              reverse-engineered issue-solution pairs for fine-tuning.
+            </p>
+          </div>
+        </article>
+
+        <article class="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-2xl card-hover border border-white/20 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-pink-400 to-red-500 rounded-full -mr-12 -mt-12 opacity-20"></div>
+          <div class="relative z-10">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">NLP for Legal Reasoning</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Worked on fine-tuning models to classify legal claims and holdings from judicial text.
+              Investigated few-shot learning, prompt engineering, and in-context reasoning to support
+              legal decision automation.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="music" class="section-fade space-y-6">
+      <h2 class="text-4xl font-bold text-gradient mb-12 text-center">Music</h2>
+      <div class="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-2xl card-hover border border-white/20 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-red-400 to-pink-500 rounded-full -ml-16 -mt-16 opacity-20"></div>
+        <div class="relative z-10 space-y-6">
+          <p class="text-lg leading-relaxed text-gray-700">
+          Check out some of my creative work and let me know if you want to collaborate!
+          </p>
+
+          <!-- 🎵 🍎 🎧 Music Buttons -->
+          <div class="pt-4 flex justify-center space-x-6 flex-wrap">
+            <!-- Bandcamp Button -->
+            <div class="text-center">
+              <a href="https://isabelleng.bandcamp.com/" target="_blank" rel="noopener"
+                class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-pink-500 to-red-500 text-white text-2xl rounded-full shadow-lg hover:scale-110 hover:shadow-2xl transform transition duration-300 ease-in-out">
+                🎵
+              </a>
+              <p class="text-sm text-gray-600 mt-2">Bandcamp</p>
+            </div>
+
+            <!-- Apple Music Button -->
+            <div class="text-center">
+              <a href="https://music.apple.com/us/artist/isabelle-ng/1520548065" target="_blank" rel="noopener"
+                class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gray-800 to-gray-600 text-white text-2xl rounded-full shadow-lg hover:scale-110 hover:shadow-2xl transform transition duration-300 ease-in-out">
+                🍎
+              </a>
+              <p class="text-sm text-gray-600 mt-2">Apple Music</p>
+            </div>
+
+            <!-- The Bird is Asleep Button -->
+            <div class="text-center">
+              <a href="https://thebirdisasleep.bandcamp.com/album/the-bird-is-asleep" target="_blank" rel="noopener"
+                class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-700 text-white text-2xl rounded-full shadow-lg hover:scale-110 hover:shadow-2xl transform transition duration-300 ease-in-out">
+                🎧
+              </a>
+              <p class="text-sm text-gray-600 mt-2">More!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-fade space-y-6">
+      <h2 class="text-4xl font-bold text-gradient mb-12 text-center">Contact</h2>
+      <div class="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-2xl card-hover border border-white/20 text-center">
+        <p class="text-lg leading-relaxed text-gray-700 mb-8">
+          I'd love to connect — whether it's about research, collaboration, or just to say hello.
+          You can reach me at:
+        </p>
+        <div class="flex justify-center space-x-8">
+          <a href="mailto:isabelle.ng@berkeley.edu" class="bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+            Email
+          </a>
+          <a href="https://github.com/isabe11eng" class="bg-gradient-to-r from-gray-700 to-gray-900 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105" target="_blank" rel="noopener">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/isabelle-ng-185875262/" class="bg-gradient-to-r from-red-600 to-pink-800 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="relative z-10 text-center py-8 text-gray-500 bg-white/30 backdrop-blur-sm border-t border-white/20">
+    <p class="text-sm">© 2025 Isabelle Ng — All rights reserved.</p>
+  </footer>
+
+  <!-- 💖 Floating Hearts Start -->
+<style>
+  .heart {
+    position: absolute;
+    font-size: 28px;
+    color: #ff79c6; /* neon pink */
+    animation: floatHeart 6s linear infinite;
+    opacity: 0.85;
+    z-index: 5;
+    pointer-events: none;
+    filter: drop-shadow(0 0 6px #ff79c6);
+  }
+
+  @keyframes floatHeart {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) scale(1.5);
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerText = "🧡"; // Show emoji
+
+    heart.style.left = `${Math.random() * 100}vw`;
+    heart.style.top = "100vh";
+    heart.style.animationDuration = `${5 + Math.random() * 3}s`;
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 8000);
+  }
+
+  setInterval(createHeart, 800);
+</script>
+<!-- 💖 Floating Hearts End -->
+
+
+
+</body>
+</html>
