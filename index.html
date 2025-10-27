@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Isabelle Ng — Research</title>
+  <meta name="description" content="Isabelle Ng — Research in agentic LLMs, evolutionary methods, text-to-SQL, and NLP for law." />
+
+  <!-- ⭐ Favicon: star -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>⭐</text></svg>">
+
+  <meta property="og:title" content="Isabelle Ng — Research" />
+  <meta property="og:description" content="NLP, Agentic LLMs, Evolutionary Methods, AI Law" />
+  <meta property="og:type" content="website" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#f4f7ff', 100:'#e9effe', 600:'#3556d5', 700:'#2a44a9' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    :focus-visible { outline: 2px solid rgb(53 86 213); outline-offset: 2px; }
+    .pub { grid-template-columns: auto 1fr; }
+    .kbd { border: 1px solid rgb(221 224 234); padding: .15rem .4rem; border-radius: .375rem; font-size: .825rem; }
+    .linkish { text-underline-offset: 3px; }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.06); }
+    .prose a { text-decoration-thickness: .08em; }
+  </style>
+
+  <!-- Minimal schema.org profile  -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Isabelle Ng",
+    "affiliation":[
+      {"@type":"CollegeOrUniversity","name":"University of California, Berkeley"},
+      {"@type":"Organization","name":"Accenture Center for Advanced AI"}
+    ],
+    "url":"https://isabelle-ng.com",
+    "sameAs":[
+      "https://github.com/isabe11eng",
+      "https://www.linkedin.com/in/isabelle-ng-185875262/",
+      "https://openreview.net/profile?id=%7EIsabelle_Diana_May-Xin_Ng1"
+    ],
+    "knowsAbout":["NLP","Agentic LLMs","Evolutionary Algorithms","Text-to-SQL"]
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-900 antialiased selection:bg-brand-100 selection:text-brand-700">
+  <!-- Top bar -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-slate-200/70">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="h-14 flex items-center justify-between">
+        <nav class="text-sm font-medium text-slate-700 flex items-center gap-6">
+          <a href="#about" class="hover:text-brand-700 linkish">About</a>
+          <a href="#publications" class="hover:text-brand-700 linkish">Publications</a>
+          <a href="#experience" class="hover:text-brand-700 linkish">Experience</a>
+          <a href="#teaching" class="hover:text-brand-700 linkish">Teaching</a>
+          <a href="#service" class="hover:text-brand-700 linkish">Service</a>
+          <a href="#contact" class="hover:text-brand-700 linkish">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6">
+    <!-- Hero -->
+    <section id="about" class="py-12 sm:py-16">
+      <div class="grid md:grid-cols-3 gap-8 items-center">
+        <div class="md:col-span-2">
+          <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight">Isabelle Ng</h1>
+          <p class="mt-2 text-slate-600">Computer Science • Data Science • Music — UC Berkeley</p>
+
+          <!-- Intro updated per request -->
+          <p class="mt-4 leading-relaxed text-slate-700">
+            I am a final year undergraduate student at UC Berkeley interested in natural language processing. My most recent work involved
+            designing and evaluating <span class="font-medium">agentic LLM systems</span> that combine
+            evolutionary search with reasoning-time refinement, with applications to
+            text-to-SQL. I am also a Head uGSI for Data C88C at Berkeley and a contract consultant for Oracle.
+            <span class="block mt-3">I’m currently <span class="font-medium">seeking PhD advisors</span> and applying to PhD programs for the next cycle.
+            I’ll be at <span class="font-medium">NeurIPS 2025</span>; happy to chat about research and potential advising fits.</span>
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-2 text-xs">
+            <span class="kbd bg-white">NLP</span>
+            <span class="kbd bg-white">Agentic LLMs</span>
+            <span class="kbd bg-white">AI Engineering</span>
+            <span class="kbd bg-white">Machine Learning</span>
+            <span class="kbd bg-white">AI Safety</span>
+          </div>
+          <div class="mt-6 flex items-center gap-4 text-sm">
+            <a class="text-brand-700 hover:underline linkish" href="https://github.com/isabe11eng" target="_blank" rel="noopener">GitHub</a>
+            <a class="text-brand-700 hover:underline linkish" href="https://www.linkedin.com/in/isabelle-ng-185875262/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="text-brand-700 hover:underline linkish" href="mailto:isabelle.ng@berkeley.edu">Email</a>
+            <a class="text-brand-700 hover:underline linkish" href="https://openreview.net/profile?id=%7EIsabelle_Diana_May-Xin_Ng1" target="_blank" rel="noopener">OpenReview</a>
+          </div>
+        </div>
+
+        <!-- News (added ProRefine) -->
+        <aside class="md:col-span-1 bg-white border border-slate-200 rounded-xl p-4 shadow-soft">
+          <h3 class="font-semibold">News</h3>
+          <ul class="mt-2 space-y-2 text-sm text-slate-700">
+            <li><span class="font-medium">Nov ’25</span> — <em>MultiGA</em> and <em>ProRefine</em> accepted to NeurIPS 2025 Efficient Reasoning Workshop (links soon).</li>
+            <li><span class="font-medium">Jun ’25</span> — New arXiv preprint on Inference-Time Prompt Refinement (see below).</li>
+            <li><span class="font-medium">May ’25</span> — Head uGSI for Data C88C (Berkeley).</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Publications (BibTeX removed) -->
+    <section id="publications" class="py-8 sm:py-10 border-t border-slate-200">
+      <h2 class="text-2xl font-semibold">Publications & Preprints</h2>
+      <div class="mt-6 space-y-6">
+
+        <!-- Paper 1: MultiGA -->
+        <article class="grid pub gap-4">
+          <div class="pt-1">
+            <span class="text-xs rounded-full px-2 py-1 bg-brand-100 text-brand-700">2025</span>
+          </div>
+          <div>
+            <h3 class="font-medium leading-snug">MultiGA: Leveraging Multi-Source Seeding in Genetic Algorithms</h3>
+            <p class="text-sm text-slate-600">
+              Isabelle Ng, et al. <span class="mx-1">•</span> NeurIPS 2025 Efficient Reasoning Workshop (to appear)
+            </p>
+            <div class="mt-2 flex flex-wrap gap-2 text-xs">
+              <span class="rounded border border-slate-300 px-2 py-1 opacity-60">PDF (soon)</span>
+              <span class="rounded border border-slate-300 px-2 py-1 opacity-60">Poster (soon)</span>
+            </div>
+          </div>
+        </article>
+
+         <!-- Paper 2: arXiv -->
+        <article class="grid pub gap-4">
+          <div class="pt-1">
+            <span class="text-xs rounded-full px-2 py-1 bg-brand-100 text-brand-700">2025</span>
+          </div>
+          <div>
+            <h3 class="font-medium leading-snug">
+              ProRefine: Inference-Time Prompt Refinement with Textual Feedback (preprint)
+            </h3>
+            <p class="text-sm text-slate-600">
+              Deepak Pandita, et al. <span class="mx-1">•</span> arXiv: <a class="linkish text-brand-700" href="https://arxiv.org/abs/2506.05305" target="_blank" rel="noopener">2506.05305</a>
+            </p>
+            <div class="mt-2 flex flex-wrap gap-2 text-xs">
+              <a class="rounded border border-slate-300 px-2 py-1 hover:bg-slate-50" href="https://arxiv.org/pdf/2506.05305" target="_blank" rel="noopener">PDF</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-8 sm:py-10 border-t border-slate-200">
+    <h2 class="text-2xl font-semibold">Research & Industry Experience</h2>
+
+    <div class="mt-4 grid md:grid-cols-2 gap-6">
+
+        <!-- Accenture -->
+        <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-soft">
+        <h3 class="font-medium">GenAI Research Engineering Intern</h3>
+        <p class="text-sm text-slate-600 mt-0.5">Accenture, Center for Advanced AI · Mountain View, CA · Jun 2025 – Aug 2025</p>
+        <ul class="mt-2 list-disc list-inside text-sm leading-relaxed text-slate-700">
+            <li>Led research and development of <em>MultiGA</em>, a novel evolutionary prompting framework for multi-LLM collaboration on reasoning tasks such as text-to-SQL and trip planning.</li>
+            <li>Developed an experimental pipeline enabling automated agentic experiments with remote metric collection and evaluation.</li>
+            <li>First author of <em>MultiGA</em>, to appear at NeurIPS 2025 Efficient Reasoning Workshop and in progress for ACL 2026 submission.</li>
+        </ul>
+        </div>
+
+        <!-- UC Berkeley I School -->
+        <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-soft">
+        <h3 class="font-medium">NLP Student Researcher</h3>
+        <p class="text-sm text-slate-600 mt-0.5">UC Berkeley School of Information · Berkeley, CA · Jan 2025 – May 2025</p>
+        <ul class="mt-2 list-disc list-inside text-sm leading-relaxed text-slate-700">
+            <li>Analyzed 1,500 legal cases using LLMs to study judicial reasoning around Section 230 under UCB/Stanford JD-PhD mentorship.</li>
+            <li>Identified interpretive patterns with implications for legislative reform; project recognized with <strong>Best Poster</strong> at UC Berkeley’s Research Symposium.</li>
+            <li>See Berkeley I School news coverage <a href="https://www.ischool.berkeley.edu/news/2025/recent-phd-alum-emma-lurie-mentors-award-winning-undergraduate-team" target="_blank" rel="noopener" class="text-brand-700 hover:underline linkish">here</a>.</li>
+        </ul>
+        </div>
+
+        <!-- Mattel -->
+        <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-soft">
+        <h3 class="font-medium">Data Engineering Consultant</h3>
+        <p class="text-sm text-slate-600 mt-0.5">Mattel, Inc. · Remote · Sep 2024 – Jan 2025</p>
+        <ul class="mt-2 list-disc list-inside text-sm leading-relaxed text-slate-700">
+            <li>Assessed Mattel’s enterprise data ecosystem and designed a scalable ESG data pipeline supporting sustainability initiatives.</li>
+            <li>Conducted stakeholder interviews and identified infrastructure discrepancies across divisions.</li>
+            <li>Developed recommendations to centralize analytics workflows in Google BigQuery and improve governance and access protocols.</li>
+        </ul>
+        </div>
+
+        <!-- H2O.ai -->
+        <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-soft">
+        <h3 class="font-medium">Machine Learning Engineering Intern</h3>
+        <p class="text-sm text-slate-600 mt-0.5">H2O.ai · Mountain View, CA · Jun 2024 – Aug 2024</p>
+        <ul class="mt-2 list-disc list-inside text-sm leading-relaxed text-slate-700">
+            <li>Built a Retrieval-Augmented Generation (RAG) chatbot to assist employees with technical queries about H2O.ai products.</li>
+            <li>Integrated Python APIs for H2O Wave and H2O GPT Enterprise, engineering a query controller that routes questions by product type.</li>
+            <li>Improved internal knowledge discovery and documentation accessibility across teams.</li>
+        </ul>
+        </div>
+
+    </div>
+    </section>
+
+
+    <!-- Teaching (kept your table, removed dark classes) -->
+    <section id="teaching" class="py-8 sm:py-10 border-t border-slate-200">
+      <h2 class="text-2xl font-semibold mb-4">Teaching</h2>
+      <p class="text-sm text-slate-600 mb-6">
+        I have served as a teaching assistant and course leader for Berkeley’s core computer science and data science curricula,
+        with responsibilities spanning lecture development, infrastructure, and pedagogy design.
+      </p>
+
+      <div class="overflow-x-auto">
+        <table class="min-w-full border border-slate-200 text-sm">
+          <thead class="bg-slate-100 text-slate-700">
+            <tr>
+              <th class="px-4 py-2 text-left font-semibold border-b border-slate-200">Term</th>
+              <th class="px-4 py-2 text-left font-semibold border-b border-slate-200">Course</th>
+              <th class="px-4 py-2 text-left font-semibold border-b border-slate-200">Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-200">
+              <td class="px-4 py-2">Fall 2025</td>
+              <td class="px-4 py-2">Data C88C — Computational Structures in Data Science</td>
+              <td class="px-4 py-2">Head uGSI (Lead TA)</td>
+            </tr>
+            <tr class="border-b border-slate-200">
+              <td class="px-4 py-2">Spring 2025</td>
+              <td class="px-4 py-2">Data C88C — Computational Structures in Data Science</td>
+              <td class="px-4 py-2">uGSI (Teaching Assistant)</td>
+            </tr>
+            <tr class="border-b border-slate-200">
+              <td class="px-4 py-2">Fall 2024</td>
+              <td class="px-4 py-2">Data C88C — Computational Structures in Data Science</td>
+              <td class="px-4 py-2">uGSI (Teaching Assistant)</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">Summer 2024</td>
+              <td class="px-4 py-2">CS 61A — Structure and Interpretation of Computer Programs</td>
+              <td class="px-4 py-2">uGSI (Teaching Assistant)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section id="service" class="py-8 sm:py-10 border-t border-slate-200">
+    <h2 class="text-2xl font-semibold">Leadership & Service</h2>
+    <ul class="mt-4 space-y-3 text-sm leading-relaxed">
+        <li>
+        <span class="font-medium">
+            <a href="https://spcberkeley.org/" target="_blank" rel="noopener" class="text-brand-700 hover:underline linkish">
+            Software Product @ Cal
+            </a>
+        </span>
+        — <span class="font-medium">Cofounder &amp; President (Aug 2024 – May 2025)</span>.
+        Established the first undergraduate organization for software product management at UC Berkeley, fostering collaboration among engineers, designers, and business students.
+        Organized the
+        <a href="https://spmsummit.org/spm-summit-na-2024" target="_blank" rel="noopener" class="text-brand-700 hover:underline linkish">
+            2025 Global AI Products Summit
+        </a>
+        and led cross-disciplinary mentorship and fellowship programs focused on product innovation.
+        </li>
+
+        <li>
+        <span class="font-medium">
+            <a href="https://www.dssberkeley.org/" target="_blank" rel="noopener" class="text-brand-700 hover:underline linkish">
+            Data Science Society at Berkeley
+            </a>
+        </span>
+        — <span class="font-medium">Vice President</span>.
+        Directed community and culture initiatives, coordinating career fairs, technical workshops, and networking events for data science students.
+        </li>
+    </ul>
+    </section>
+
+
+
+    <!-- Contact -->
+    <section id="contact" class="py-10 border-t border-slate-200">
+      <h2 class="text-2xl font-semibold">Contact</h2>
+      <p class="mt-3 text-sm text-slate-700">
+        Email: <a class="linkish text-brand-700" href="mailto:isabelle.ng@berkeley.edu">isabelle.ng@berkeley.edu</a>
+      </p>
+      <p class="mt-1 text-sm text-slate-700">
+        GitHub: <a class="linkish text-brand-700" href="https://github.com/isabe11eng" target="_blank" rel="noopener">isabe11eng</a> ·
+        LinkedIn: <a class="linkish text-brand-700" href="https://www.linkedin.com/in/isabelle-ng-185875262/" target="_blank" rel="noopener">/in/isabelle-ng-185875262/</a> ·
+        OpenReview: <a class="linkish text-brand-700" href="https://openreview.net/profile?id=%7EIsabelle_Diana_May-Xin_Ng1" target="_blank" rel="noopener">profile</a>
+      </p>
+      <p class="mt-6 text-xs text-slate-500">© 2025 Isabelle Ng</p>
+    </section>
+  </main>
+
+  <!-- Dark mode script removed -->
+</body>
+</html>
